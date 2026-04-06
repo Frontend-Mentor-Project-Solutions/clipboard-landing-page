@@ -1,3 +1,62 @@
+:root {
+  --clr-white: hsl(0 100 100);
+  --clr-black: hsl(0 0 0);
+  --clr-gray-950: hsl(0 0 16);
+  --clr-gray-700: hsl(210 10 33);
+  --clr-gray-500: hsl(201 11 66);
+  --clr-gray-50: hsl(180 11 96);
+
+  --clr-green-500: hsl(171 66 44);
+  --clr-green-hover: hsl(from var(--clr-green-500) h s calc(l + 14));
+
+  --clr-blue-500: hsl(233 100 69);
+  --clr-blue-hover: hsl(from var(--clr-blue-500) h s calc(l + 8));
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: clamp(1rem, 0.25rem + 1.563vw, 1.25rem);
+  font-weight: 500;
+  color: var(--clr-gray-500);
+  background-color: var(--clr-white);
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--clr-gray-700);
+}
+
+h1 {
+  font-size: clamp(2rem, 1.228rem + 2.574vw, 2.875rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 1.309rem + 1.471vw, 2.25rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+ul p {
+  font-size: 1rem;
+}
+
+footer {
+  font-size: 1.25rem;
+  color: var(--clr-gray-700);
+}
+
+/* layouts */
+
 .content-grid {
   --padding-inline: 2rem;
   --content-max-width: 730px;
@@ -79,3 +138,9 @@
     grid-column: center-line / popout-end;
   }
 }
+
+/* components */
+
+/* utilities */
+
+/* exceptions */
