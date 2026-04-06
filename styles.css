@@ -139,6 +139,34 @@ footer {
   }
 }
 
+.switcher {
+  --switcher-threshold: 45rem;
+  --switcher-gap: 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-gap);
+
+  > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--switcher-threshold) - 100%) * 999);
+  }
+
+  &[data-switcher="small"] {
+    width: 100%;
+    --switcher-threshold: 30rem;
+    --switcher-gap: 1rem;
+  }
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+  justify-content: center; /* at desktop items should be space-between */
+  align-items: center;
+}
+
 /* components */
 
 header {
@@ -149,13 +177,12 @@ header {
 
   img {
     margin-block-end: 3.5rem;
+    order: -1;
   }
 }
 
 .buttons {
-  display: flex;
   margin-block-start: 3rem;
-  gap: 1rem;
 
   a {
     --button-color: var(--clr-green-500);
@@ -181,11 +208,13 @@ header {
   }
 }
 
-/* utilities */
-
-.image-order {
-  order: -1;
+.features {
+  li {
+    display: grid;
+    justify-items: center;
+  }
 }
+/* utilities */
 
 /* exceptions */
 
