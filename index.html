@@ -18,7 +18,7 @@
     <title>Frontend Mentor | Clipboard landing page</title>
   </head>
   <body>
-    <header>
+    <header class="content-grid">
       <h1>A history of everything you copy</h1>
 
       <p>
@@ -34,8 +34,8 @@
       <img src="images/logo.svg" alt="Clipboard app logo" />
     </header>
 
-    <main>
-      <section>
+    <main class="content-grid">
+      <section class="ultra-wide">
         <h2>Keep track of your snippets</h2>
 
         <p>
@@ -44,56 +44,60 @@
           iOS apps will help you organize everything.
         </p>
 
-        <figure>
-          <img
-            src="images/image-computer.png"
-            alt="iMac displaying a beach landscape photo with the Clipboard app's quick-copy popup overlay"
-          />
-        </figure>
+        <div class="ultra-wide" data-split="ultra-wide-popout">
+          <figure>
+            <img
+              src="images/image-computer.png"
+              alt="iMac displaying a beach landscape photo with the Clipboard app's quick-copy popup overlay"
+            />
+          </figure>
 
-        <ul>
-          <li>
-            <h3>Quick Search</h3>
-            <p>
-              Easily search your snippets by content, category, web address,
-              application, and more.
-            </p>
-          </li>
+          <ul>
+            <li>
+              <h3>Quick Search</h3>
+              <p>
+                Easily search your snippets by content, category, web address,
+                application, and more.
+              </p>
+            </li>
 
-          <li>
-            <h3>iCloud Sync</h3>
-            <p>Instantly saves and syncs snippets across all your devices.</p>
-          </li>
+            <li>
+              <h3>iCloud Sync</h3>
+              <p>Instantly saves and syncs snippets across all your devices.</p>
+            </li>
 
-          <li>
-            <h3>Complete History</h3>
-            <p>
-              Retrieve any snippets from the first moment you started using the
-              app.
-            </p>
-          </li>
-        </ul>
+            <li>
+              <h3>Complete History</h3>
+              <p>
+                Retrieve any snippets from the first moment you started using
+                the app.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section>
+      <section class="popout">
         <h2>Access Clipboard anywhere</h2>
         <p>
           Whether you’re on the go, or at your computer, you can access all your
           Clipboard snippets in a few simple clicks.
         </p>
-        <figure>
+
+        <figure class="popout">
           <img
+            class="popout"
             src="images/image-devices.png"
             alt="MacBook and iPhone showing the Clipboard app synced across devices"
           />
         </figure>
       </section>
 
-      <section>
+      <section class="breakout">
         <h2>Supercharge your workflow</h2>
         <p>We’ve got the tools to boost your productivity.</p>
 
-        <ul>
+        <ul class="breakout">
           <li>
             <h3>Create blacklists</h3>
             <p>
@@ -118,8 +122,8 @@
         </ul>
       </section>
 
-      <section aria-label="Trusted by">
-        <ul>
+      <section aria-label="Trusted by" class="breakout">
+        <ul class="breakout">
           <li><img src="images/logo-google.png" alt="Google" /></li>
           <li><img src="images/logo-ibm.png" alt="IBM" /></li>
           <li><img src="images/logo-microsoft.png" alt="Microsoft" /></li>
@@ -146,36 +150,38 @@
       </section>
     </main>
 
-    <footer>
-      <img src="images/logo.svg" alt="Clipboard app logo" />
+    <footer class="content-grid">
+      <div class="breakout">
+        <img src="images/logo.svg" alt="Clipboard app logo" />
 
-      <nav aria-label="Footer">
-        <ul>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Press Kit</a></li>
-          <li><a href="#">Install Guide</a></li>
+        <nav aria-label="Footer">
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Press Kit</a></li>
+            <li><a href="#">Install Guide</a></li>
+          </ul>
+        </nav>
+
+        <ul aria-label="Social media links">
+          <li>
+            <a href="#" aria-label="Facebook"
+              ><img src="images/icon-facebook.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter"
+              ><img src="images/icon-twitter.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram"
+              ><img src="images/icon-instagram.svg" alt=""
+            /></a>
+          </li>
         </ul>
-      </nav>
-
-      <ul aria-label="Social media links">
-        <li>
-          <a href="#" aria-label="Facebook"
-            ><img src="icon-facebook.svg" alt=""
-          /></a>
-        </li>
-        <li>
-          <a href="#" aria-label="Twitter"
-            ><img src="icon-twitter.svg" alt=""
-          /></a>
-        </li>
-        <li>
-          <a href="#" aria-label="Instagram"
-            ><img src="icon-instagram.svg" alt=""
-          /></a>
-        </li>
-      </ul>
+      </div>
     </footer>
   </body>
 </html>
