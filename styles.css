@@ -176,14 +176,6 @@ main {
   img {
     display: initial;
   }
-
-  &[data-cluster="left-align"] {
-    justify-content: flex-start;
-
-    > * {
-      flex-grow: 0;
-    }
-  }
 }
 
 .stack {
@@ -216,6 +208,14 @@ footer {
   background-color: var(--clr-gray-50);
   padding-block: 2.5rem;
   container-type: inline-size;
+
+  a {
+    transition: color 200ms ease-out;
+
+    &:hover {
+      color: var(--clr-green-500);
+    }
+  }
 }
 
 .buttons {
@@ -230,9 +230,15 @@ footer {
     padding-block: 0.75rem;
     border-radius: 100vw;
     border-bottom: 3px solid hsl(from var(--button-color) h s calc(l - 10));
+    transition: background 200ms ease-out;
 
     &:hover {
       background-color: var(--clr-green-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--clr-white);
+      outline-offset: -4px;
     }
 
     &[data-variant="secondary"] {
